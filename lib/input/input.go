@@ -88,6 +88,14 @@ func GetInput() {
 				if logMsh != nil {
 					logMsh.Log(true)
 				}
+			case "toggle":
+				// toggles hibernation feature
+				if SuspendAllow = true {
+				SuspendAllow = false;
+				}
+				else {
+				SuspendAllow = true
+				}
 			case "exit":
 				// stop minecraft server forcefully
 				logMsh := servctrl.FreezeMS(true)
